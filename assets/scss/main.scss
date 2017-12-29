@@ -1,0 +1,30 @@
+/*----
+Presets and reset styles
+ ----*/
+@import "presets/presets";
+@import "presets/reset";
+
+/*----
+Custom libs
+ ----*/
+@import "libs/slick";
+
+/*----
+Template grid
+ ----*/
+@import "grid/bootstrap-grid";
+
+/*----
+Base template styles
+ ----*/
+@import "presets/template";
+
+/*----
+Template parts
+ ----*/
+@import "content/content";
+
+/*----
+Template media
+ ----*/
+@import "content/media";
