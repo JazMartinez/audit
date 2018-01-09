@@ -2,7 +2,7 @@ extends _layout.pug
 
 block content
     main.main-content
-        .intro
+        .intro.wrapper__light
             .container
                 h1.intro__title Аудит сайта, веб-аналитика #[br]и юзабилити-тестирования для повышения продаж
                 p.intro__text Удивительно, но факт: ваш сайт способен получать на 70–100–200 % больше лидов при той же посещаемости. Повысим конверсию со всех каналов, включая органический трафик. Улучшим юзабилити и продающие качества сайта, видимость сайта в поисковиках. Гарантируем!
@@ -11,30 +11,30 @@ block content
                         .convers
                             .convers__row.radio
                                 label.radio__container
-                                    input(type="radio").radio__old
+                                    input(type="radio" name="site" checked).radio__old
                                     span.radio__new
                                     span.radio__caption chinagroups.ru
                                 label.radio__container
-                                    input(type="radio").radio__old
+                                    input(type="radio" name="site").radio__old
                                     span.radio__new
                                     span.radio__caption broniruem24.ru
                             .convers__row.radio-tabs
                                 label.radio-tabs__container
-                                    input(type="radio").radio-tabs__old
+                                    input(type="radio" name="convers-type").radio-tabs__old
                                     span.radio-tabs__new
                                     span.radio-tabs__caption отказы
                                 label.radio-tabs__container
-                                    input(type="radio").radio-tabs__old
+                                    input(type="radio" name="convers-type" checked).radio-tabs__old
                                     span.radio-tabs__caption конверсия
                             .convers-images
-                                #china-otkaz.convers-images__item: img(src="#" alt="#")
-                                #bron-otkaz.convers-images__item: img(src="#" alt="#")
-                                #china-convers.convers-images__item: img(src="#" alt="#")
-                                #bron-convers.convers-images__item: img(src="#" alt="#")
+                                #china-otkaz.convers-images__item: img(src="./img/tabs/1.png" alt="#")
+                                #bron-otkaz.convers-images__item: img(src="./img/tabs/4.png" alt="#")
+                                #china-convers.convers-images__item.active: img(src="./img/tabs/2.png" alt="#")
+                                #bron-convers.convers-images__item: img(src="./img/tabs/3.png" alt="#")
                     .col-md-4
                         .intro-form
                             h2.intro-form__title Бесплатный аудит!
-                            p.intro-form__caption Оставьте заявку и мы расскажем, #[br]как удвоить количество заказов с сайта
+                            p.intro-form__caption: span Оставьте заявку и мы расскажем, #[br]как удвоить количество заказов с сайта
                             .intro-form__group: input(type="text" name="phone" placeholder="Телефон/Email").intro-form__input
                             .intro-form__group: input(type="text" name="link" placeholder="Адрес сайта").intro-form__input
                             .intro-form__group: button(type="submit").intro-form__btn Получить совет эксперта
@@ -45,81 +45,82 @@ block content
                 .about__row.row
                     .col-md-6.col-12
                         .about-item
-                            .about-item__icon: img(src="#" alt="#")
+                            .about-item__icon: img(src="./img/about/1.png" alt="#")
                             .about-item__desc
                                 h3.about-item__title Сделать сайт удобнее для клиентов
                                 p.about-item__text Пользователям будет легче найти нужный товар/услугу и оформить заказ. Проведем юзабилити- тестирования. Подскажем, как выгоднее разместить информацию. Все прозрачно, просто и доступно!
                     .col-md-6.col-12
                         .about-item
-                            .about-item__icon: img(src="#" alt="#")
+                            .about-item__icon: img(src="./img/about/2.png" alt="#")
                             .about-item__desc
                                 h3.about-item__title Привлечь больше клиентов
                                 p.about-item__text Анализ технических характеристик позволит настроить сайт под актуальные требования поисковых систем и подняться в выдаче. Теплое местечко в ТОПе уже ждет!
                     .col-md-6.col-12
                         .about-item
-                            .about-item__icon: img(src="#" alt="#")
+                            .about-item__icon: img(src="./img/about/3.png" alt="#")
                             .about-item__desc
                                 h3.about-item__title Повысить отдачу от любой рекламы
                                 p.about-item__text Подготовим сайт к запуску рекламы, выявим проблемы, которые могут возникнуть  у пользователей и помешать конверсии.  Не позволим вам слить бюджет!
                     .col-md-6.col-12
                         .about-item
-                            .about-item__icon: img(src="#" alt="#")
+                            .about-item__icon: img(src="./img/about/4.png" alt="#")
                             .about-item__desc
                                 h3.about-item__title Гарантированно увеличить продажи
                                 p.about-item__text Улучшения юзабилити сайта увеличит число обращений и продаж с сайта. Вам остается только их обработка. Настройка веб-аналитики и отслеживание конверсии позволит держать руку на пульсе.
-        .calculate
+        .calculate.wrapper__light
             .container
                 h2 Аудит сайта и юзабилити-тестирование – решения для взрывной конверсии
-                p Хотите, чтобы ваш сайт зарабатывал больше? Тогда ваша главная задача – увеличение конверсии сайта. А между тем сегодня 9 из 10 сайтов недополучают сотни и тысячи посетителей из-за глупейших ошибок.
-                .row
+                p.calculate__text Хотите, чтобы ваш сайт зарабатывал больше? Тогда ваша главная задача – увеличение конверсии сайта. А между тем сегодня 9 из 10 сайтов недополучают сотни и тысячи посетителей из-за глупейших ошибок.
+                .calculate__row.row
                     .col-md-6.col-12
                         .calculate-form
                             p.calculate-form__title Рассчитайте конверсию своего сайта:
                             .row.no-gutters
                                 .col-md-6.col-12
-                                    .calculate-form__caption Посещаемость сайта, визитов в месяц:
+                                    .calculate-form__caption Посещаемость сайта, #[br]визитов в месяц:
                                 .col-md-6.col-12
                                     input(type="text").calculate-form__input
                             .row.no-gutters
                                 .col-md-6.col-12
-                                    .calculate-form__caption Количество заявок/заказов с сайта:
+                                    .calculate-form__caption Количество #[br]заявок/заказов с сайта:
                                 .col-md-6.col-12
                                     input(type="text").calculate-form__input
                             button.calculate-form__btn Расчитать
                     .col-md-6.col-12
                         .calculate-result
-                            p.calculate-result__text Конверсия сайта: - %
-                            p.calculate-result__text Вы теряете: - % #[small потенциальных клиентов]
+                            .calculate-result__counts
+                                p.calculate-result__text Конверсия сайта: - %
+                                p.calculate-result__text Вы теряете: - % #[small потенциальных клиентов]
                             .calculate-result__desc
-                                p Юзабилити-аудит и юзабилити-тестирование сайта помогут быстро увеличить конверсию сайта, а значит и оборот вашей компании.
-                                p SEO-аудит позволит понять, что нужно сделать, чтобы увеличить показатели посещаемости сайта из поисковиков.
+                                p #[b Юзабилити-аудит] и #[a(href="#") юзабилити-тестирование] сайта помогут быстро увеличить конверсию сайта, а значит и оборот вашей компании.
+                                p #[b SEO-аудит] позволит понять, что нужно сделать, чтобы увеличить показатели посещаемости сайта из поисковиков.
         .tarifs
             .container
                 h2 Тарифы на аудит сайта:
-                .row
+                .tarifs__row.row
                     .col-md-4.col-12
                         .tarifs-item
                             .tarifs-item__header
-                                .tarifs-item__icon: img(src="#" alt="#")
+                                .tarifs-item__icon: img(src="./img/tarifs/1.png" alt="#")
                                 p.tarifs-item__title SEO-аудит
                                 p.tarifs-item__subtitle Находит все технические проблемы, помогает попасть в ТОП
                             .tarifs-item__body
                                 .tarifs-item__desc
                                     p Выявляем все возможные причины плохого ранжирования сайта по ключевым запросам в популярных поисковых системах Рунета.
-                                    p: strong: em Нужны гарантии улучшения позиций в поиске?
+                                    p: strong: em Нужны гарантии улучшения позиций #[br]в поиске?
                                     p: em Рекомендуем сразу заказать SEO-сопровождение, SEO-аудит туда уже входит.
                                     p.tarifs-item__tag: a(href="#") SEO-характеристики, которые оцениваем
-                                    p: a(href="#") Пример отчета по SEO-аудиту
+                                    p: a(href="#"): span Пример отчета по SEO-аудиту
                             .tarifs-item__footer
-                                p.tarifs-item__footer-text Срок выполнения 5 рабочих дней
-                                p.tarifs-item__footer-text Скидка на доработки по отчету – 3%
-                                p.tarifs-item__result #[small Цена:] 2 500 руб.
+                                p.tarifs-item__footer-time Срок выполнения 5 рабочих дней
+                                p.tarifs-item__footer-sale: span Скидка на доработки по отчету – 3%
+                                p.tarifs-item__result Цена: #[b 2 500] руб.
                                 a(href="#").tarifs-item__btn Оставить заявку
                     .col-md-4.col-12
                         .tarifs-item
                             .tarifs-item__header
-                                .tarifs-item__icon: img(src="#" alt="#")
-                                p.tarifs-item__title Юзабилити-аудит + аналитика
+                                .tarifs-item__icon: img(src="./img/tarifs/2.png" alt="#")
+                                p.tarifs-item__title Юзабилити-аудит #[br]+ аналитика
                                 p.tarifs-item__subtitle Рассказывает, как из посетителей сайта сделать покупателей
                             .tarifs-item__body
                                 .tarifs-item__desc
@@ -130,17 +131,17 @@ block content
                                     p: em Доработки сайта по отчету в стоимость не входят. Вы вносите их своими силами или можете заказать у нас за дополнительную плату.
                                     p.tarifs-item__tag: a(href="#") Продающие характеристики, которые оцениваем
                                     p.tarifs-item__tag: a(href="#") Важные показатели веб-аналитики, которые оцениваем
-                                    p: a(href="#") Пример отчета по Юзабилити-аудиту
+                                    p: a(href="#"): span Пример отчета по Юзабилити-аудиту
                             .tarifs-item__footer
-                                p.tarifs-item__footer-text Срок выполнения 10 рабочих дней
-                                p.tarifs-item__footer-text Скидка на доработки по отчету – 5%
-                                p.tarifs-item__result #[small Цена:] 15 000 руб.
+                                p.tarifs-item__footer-time Срок выполнения 10 рабочих дней
+                                p.tarifs-item__footer-sale: span Скидка на доработки по отчету – 5%
+                                p.tarifs-item__result Цена: #[b 15 000] руб.
                                 a(href="#").tarifs-item__btn Оставить заявку
                     .col-md-4.col-12
                         .tarifs-item
                             .tarifs-item__header
-                                .tarifs-item__icon: img(src="#" alt="#")
-                                p.tarifs-item__title Комплексное улучшение сайта с гарантией
+                                .tarifs-item__icon: img(src="./img/tarifs/3.png" alt="#")
+                                p.tarifs-item__title Комплексное улучшение #[br]сайта с гарантией
                                 p.tarifs-item__subtitle Гарантирует рост конверсии и развитие бизнеса
                             .tarifs-item__body
                                 .tarifs-item__desc
@@ -149,55 +150,166 @@ block content
                                             li выявляем все проблемы сайта как бизнес-инструмента, предлагаем стратегию развития;
                                             li выявляем все проблемы сайта как бизнес-инструмента, предлагаем стратегию развития;
                                     p: em Оцениваем все и исправляем сами
-                                    p.tarifs-item__tag: a(href="#") Смотреть кейсы
-                                    p: a(href="#")
+                                    p.tarifs-item__tag: a(href="#") Оцениваем все и исправляем сами
+                                    p: a(href="#"): span Смотреть кейсы
                             .tarifs-item__footer
-                                p.tarifs-item__footer-text Срок выполнения: ежемесячно
-                                p.tarifs-item__footer-text Скидка на доработки по отчету –10%
-                                p.tarifs-item__result #[small Цена:] 25 000 руб.
+                                p.tarifs-item__footer-time Срок выполнения: ежемесячно
+                                p.tarifs-item__footer-sale: span Скидка на доработки по отчету –10%
+                                p.tarifs-item__result Цена: #[b 25 000] руб.
                                 a(href="#").tarifs-item__btn Оставить заявку
                         .tarifs-item__more
-                            p: a(href="#") Дополнительные услуги по веб-аналитике и юзабилити тестированиям →
+                            p: a(href="#") Дополнительные услуги #[br]по веб-аналитике и юзабилити тестированиям →
         .express
             .container
                 .row
                     .col-md-8.col-12
-                        p.express__subtitle
-                        h2.express__title
-                        p
+                        p.express__subtitle Не нашли подходящего тарифа? Нужно быстрее и дешевле?
+                        h2.express__title Экспресс-аудит сайта
+                        p Услуга подходит для небольших сайтов, лендингов или проектов с ограниченным бюджетом.
                     .col-md-4.col-12
                         .express-info
-                            p.express-info__title
-                            p.express-info__text
-                .row
+                            p.express-info__title Перед оформлением заявки
+                            p.express-info__text рекомендуем выбрать, в какой области вам нужна консультация эксперта.
+                .express__row.row
                     .col-md-8.col-12
                         .express-tarifs.row
-                            col-md-6.col-12
+                            .col-md-6.col-12
                                 .express-tarifs__item
                                     h3.express-tarifs__title Экспресс-аудит по SEO
                                     ul
                                         li Ответим на ваши вопросы по SEO, проверим технические характеристики сайта.
                                         li Выявим критичные ошибки во внешней оптимизации ресурса, мешающие попаданию сайта в ТОП.
-                                    p.express-tarifs__warn Важно! Проводится только в формате Skype-консультации. Отчет не предоставляется.
+                                    p.express-tarifs__warn #[b Важно!] Проводится только в формате Skype-консультации. Отчет не предоставляется.
                                     p: a(href="#") Условия предоставления консультации
-                                    p.express-tarifs__price Цена: 2 500 руб.
+                                    p.express-tarifs__price Цена: #[b 2 500] руб.
                                     p.express-tarifs__btn Оставить заявку
-                            col-md-6.col-12
-                                .express-tarifs__item
-                                    h3.express-tarifs__title Экспресс-аудит по юзабилити
+                            .col-md-6.col-12
+                                .express-tarifs__item.express-tarifs__item_rotate
+                                    h3.express-tarifs__title Экспресс-аудит по&nbsp;юзабилити
                                     ul
                                         li Найдем основные ошибки и недочеты юзабилити на сайте, мешающие продажам.
                                         li Дадим четкие рекомендации по устранению ошибок и улучшению юзабилити ресурса, пришлем в отчете.
-                                    p.express-tarifs__warn Дополнительно к отчету возможна консультация по skype (+ 500 рублей к стоимости услуги).
+                                    p.express-tarifs__warn #[b Дополнительно к отчету возможна консультация по skype] (+ 500 рублей к стоимости услуги).
                                     p: a(href="#") Пример отчета по экспресс-аудиту
-                                    p.express-tarifs__price Цена: 2 500 руб.
+                                    p.express-tarifs__price Цена: #[b 2 500] руб.
                                     p.express-tarifs__btn Оставить заявку
                     .col-md-4.col-12
                         .express-more-info
                             .express-bonus
-                                .express-bonus__icon: img(src="#" alt="#")
-                                p.express-bonus__text Бонус – 3% скидка  на устранение всех найденных ошибок
+                                .express-bonus__icon: img(src="./img/target.png" alt="#")
+                                p.express-bonus__text #[b Бонус] – 3% скидка  на устранение всех найденных ошибок
                             .express-more-info__desc
-                                p: strong Заинтересовала услуга? Не знаете, какой тариф выбрать?
-                                p Оставьте заявку, это вас ни к чему не обязывает. Мы проверим, действительно ли нужен аудит вашему сайту и принесет ли он пользу.
+                                p: strong Заинтересовала услуга? #[br]Не знаете, какой тариф выбрать?
+                                p #[a(href="#") Оставьте заявку], это вас ни к чему не обязывает. Мы проверим, действительно ли нужен аудит вашему сайту и принесет ли он пользу.
                                 p Если сможем помочь – посоветуем тариф, выставим счет на оплату.
+        .container
+            .profit
+                h2 Что дают юзабилити и SEO-аудиты сайта ?
+                .profit__row.row
+                    .col-md-4.col-12
+                        .profit-item
+                            .profit-item__icon: img(src="./img/profit/1.png" alt="#")
+                            p.profit-item__title Четкие KPI сайта
+                            p.profit-item__text Настроим счетчик и цели, отражающие конверсию. Научим понимать и оперировать данными. Далее вы сами сможете отслеживать и оценивать эффективность сайта
+                    .col-md-4.col-12
+                        .profit-item
+                            .profit-item__icon: img(src="./img/profit/2.png" alt="#")
+                            p.profit-item__title Готовое ТЗ для доработок
+                            p.profit-item__text Даем предельно подробные и понятные рекомендации. С нашим отчетом вы напрямую можете идти к веб-мастерам или программистам. Дорабатывайте сайт сами, или воспользуйтесь нашей помощью с тарифом #[a(href="#") Комплексное улучшение сайта с гарантией]
+                    .col-md-4.col-12
+                        .profit-item
+                            .profit-item__icon: img(src="./img/profit/3.png" alt="#")
+                            p.profit-item__title Гарантированный результат
+                            p.profit-item__text Несем ответственность за свою работу. Вы гарантировано получаете увеличение конверсии и улучшение ПФ. Если после корректного внесения всех предложенных нами изменений (на внедрение может понадобиться несколько месяцев) улучшений не будет, мы вернем деньги
+                a(href="#").button Оставить заявку на аудит
+                p.profit__text Узнайте, как сделать клиентом каждого посетителя вашего сайта. Сразу оплачивать ничего не потребуется. Сначала мы оценим необходимость аудита для сайта и посоветуем наиболее подходящий вашему бизнесу тариф.
+            .steps
+                h2 Этапы работы по улучшению сайта с гарантией результата
+                .steps__row.row.justify-content-center
+                    .col-md-4.col-sm-6.col-12
+                        .steps-item
+                            .steps-item__icon: img(src="./img/steps/1.png" alt="#")
+                            p.steps-item__title 1. Заявка на аудит
+                            p.steps-item__text Вы оставляете заявку, мы проверяем, нужен ли аудит вашему сайту. Это бесплатно.
+                    .col-md-4.col-sm-6.col-12
+                        .steps-item.steps-item_line
+                            .steps-item__icon: img(src="./img/steps/2.png" alt="#")
+                            p.steps-item__title 2. Подготовка аудита
+                            p.steps-item__text Работаем по 100% предоплате. Оцениваем ваш сайт, составляем отчет. Дополнительно по запросу проводим юзабилити-тестирование, его результаты вносим в отчет.
+                    .col-md-4.col-sm-6.col-12
+                        .steps-item
+                            .steps-item__icon: img(src="./img/steps/3.png" alt="#")
+                            p.steps-item__title 3. Итоги аудита
+                            p.steps-item__text Отвечаем на ваши вопросы. Собираем план доработок сайта, расставляем приоритеты.
+                    .col-md-4.col-sm-6.col-12
+                        .steps-item.steps-item_row-line
+                            .steps-item__icon: img(src="./img/steps/4.png" alt="#")
+                            p.steps-item__title 5. Оценка результатов
+                            p.steps-item__text Гарантируем увеличение конверсии минимум на 3-5%. Если этого не произойдет через месяц после внесения изменений, подскажем бесплатно, что еще стоит улучшить, чтобы поднять конверсию.
+                    .col-md-4.col-sm-6.col-12
+                        .steps-item.steps-item_line
+                            .steps-item__icon: img(src="./img/steps/5.png" alt="#")
+                            p.steps-item__title 4. Улучшение сайта
+                            p.steps-item__text Дорабатываем сайт, исправляем найденные ошибки. Анализируем показатели веб-аналитики. Дополнительно по запросу проводим А\Б тестирование.
+        .trust.wrapper__light
+            .container
+                h2 Почему стоит доверить нам улучшение сайта?
+                .row
+                    .col-md-4.col-12
+                        .trust-item
+                            .trust-item__icon: img(src="./img/trust/1.png" alt="#")
+                            p.trust-item__title 7 лет делаем #[br]профессиональные аудиты
+                            p.trust-item__text В нашей копилке уже более 1850 спасенных сайтов и миллионы сохраненных средств. 2 специалиста на каждый аудит
+                    .col-md-4.col-12
+                        .trust-item
+                            .trust-item__icon: img(src="./img/trust/2.png" alt="#")
+                            p.trust-item__title Гарантируем рост #[br]конверсии
+                            p.trust-item__text На тарифе с гарантией, если конверсия не улучшится, возвращаем деньги
+                    .col-md-4.col-12
+                        .trust-item
+                            .trust-item__icon: img(src="./img/trust/3.png" alt="#")
+                            p.trust-item__title Все официально #[br]и прозрачно
+                            p.trust-item__text Заключаем индивидуальный договор или работаем по договору оферты #[a(href="#") Пример договора »]
+                    .col-md-4.col-12
+                        .trust-item
+                            .trust-item__icon: img(src="./img/trust/4.png" alt="#")
+                            p.trust-item__title Применяем современные #[br]UX-методы
+                            p.trust-item__text Используем в работе веб-аналитику, юзабилити-тестирования, метод персонажей и сценарии, опросы, сплит-тесты и т.п.
+                    .col-md-4.col-12
+                        .trust-item
+                            .trust-item__icon: img(src="./img/trust/5.png" alt="#")
+                            p.trust-item__title Все работы #[br]в срок
+                            p.trust-item__text Когда вы оплачиваете услугу, мы устанавливаем конкретную дату каждого этапа и присылаем вам отчет без опозданий
+                    .col-md-4.col-12
+                        .trust-item
+                            .trust-item__icon: img(src="./img/trust/6.png" alt="#")
+                            p.trust-item__title Профессиональные #[br]исполнители
+                            p.trust-item__text У всех специалистов есть сертификаты специалистов Яндекс.Метрики и Google Analytics
+
+                p.trust__text Готовы узнать сильные и слабые места вашего сайта?
+                a(href="#").trust__button Оставить заявку
+        .services.wrapper__light
+            .container
+                h2 Дополнительные услуги:
+                .col-md-6.col-12
+                    .services-item
+                        p.services-item__title по юзабилити-тестированиям
+                        ul
+                            li
+                                p Тестирование юзабилити сайта по ключевым для бизнеса сценариям использования — это отличное дополнение к аудиту.
+                                p Позволяет увидеть, как реальные представители целевой аудитории взаимодействуют с сайтом, что им мешает совершить покупку, что не нравится.
+                        p.services-item__count-title Стоимость тестирования
+                        p.services-item__count для 5 пользователей — от 8 000 руб.,
+                        p.services-item__count для 20 пользователей — от 25 00 руб.
+                        p.services-item__text-bottom В обоих случаях предоставляем отчет
+                .col-md-6.col-12
+                    .services-item
+                        p.services-item__title по веб-аналитике
+                        ul
+                            li
+                                p А\Б тестирование с помощью инструментов Google Optimize.
+                                p.services-item__price Стоимость: от 30 000 руб.
+                            li
+                                p Настройка сквозной аналитики, в том числе с помощью ROIstat.
+                                p.services-item__price Стоимость: от 50 000 руб.
+                        a(href="#").services-item__button Оставить заявку
